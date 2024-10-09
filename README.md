@@ -2,6 +2,10 @@
 
 This project provides a set of Python scripts for converting text to speech using OpenAI's API and concatenating multiple MP3 files into a single audio file using `ffmpeg`.
 
+Intended use case is to paste your written material into the input.txt file or to generate an input.txt file within the same directory as the code files and run the `main.py` script. The script is written in such a way that it will automatically chunk your pasted text by complete sentences so as to not run over the 4096 input token limit - this will create multiple MP3 files which are then joined together using FFMPEG, and this should create a seamless-sounding narrative reading of your text.
+
+The default voice model chosen is `fable`, but you can change this to your voice model of choice by modifying the `voice` variable inside the `convert_text_to_speech` function.
+
 ## Features
 
 - **Text-to-Speech Conversion**: Uses OpenAI's TTS model to convert text files into speech and save the output as MP3 files.
@@ -28,14 +32,15 @@ pip install openai
 ### Text-to-Speech Conversion (`main.py`)
 
 1. Replace `'your-api-key'` in the script with your actual OpenAI API key.
-2. Place your text file in the same directory or provide the correct path to the `input.txt` file.
-3. Run the script to generate MP3 files for each chunk of the text:
+2. If desired, change the `voice` variable form `fable` to your desired [voice model](https://platform.openai.com/docs/guides/text-to-speech/voice-options) within the `convert_text_to_speech` function.
+3. Place your text file in the same directory or provide the correct path to the `input.txt` file.
+4. Run the script to generate MP3 files for each chunk of the text:
 
 ```bash
 python main.py
 ```
 
-- The generated MP3 files will be saved as `output_part_N.mp3`.
+- The generated MP3 files will be saved as `output_part_N.mp3` and automatically concatenated into a `final_output.mp3` file.
 
 ### Audio Concatenation (`concatenate.py`)
 
