@@ -56,10 +56,11 @@ python concatenate.py
 
 ## License
 
-This project is licensed under the **Creative Commons Attribution-NonCommercial 4.0 International (CC BY-NC 4.0)**.
+This project is licensed under the **Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)**.
 
 You are free to:
 - Share and adapt the material for **non-commercial** purposes, as long as you give appropriate credit.
+- If you adapt or modify the material, you must **distribute your contributions under the same license** (CC BY-NC-SA 4.0).
 
 **No commercial use** of this software is permitted without permission from the author. For commercial inquiries, please contact [the author](mailto:barzin@duck.com).
 
