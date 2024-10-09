@@ -44,7 +44,9 @@ python main.py
 
 ### Audio Concatenation (`concatenate.py`)
 
-If you have multiple MP3 files (e.g., `output_part_1.mp3`, `output_part_2.mp3`, etc.), you can concatenate them into a single MP3 file:
+Please note: the `main.py` script will automatically invoke the audio concatenation function.
+
+However, if you wish to call this separately if you have multiple MP3 files (e.g., `output_part_1.mp3`, `output_part_2.mp3`, etc.), you can concatenate them into a single MP3 file:
 
 ```bash
 python concatenate.py
