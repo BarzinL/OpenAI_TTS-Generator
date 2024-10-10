@@ -24,14 +24,14 @@ Before running the scripts, make sure you have the following installed:
 Install the required Python libraries by running:
 
 ```bash
-pip install openai
+pip install openai toml
 ```
 
 ## How to Use
 
 ### Text-to-Speech Conversion (`main.py`)
 
-1. Replace `'your-api-key'` in the script with your actual OpenAI API key.
+1. Replace `'your-api-key'` in the `settings.toml` file with your actual OpenAI API key.
 2. If desired, change the `voice` variable form `fable` to your desired [voice model](https://platform.openai.com/docs/guides/text-to-speech/voice-options) within the `convert_text_to_speech` function.
 3. Place your text file in the same directory or provide the correct path to the `input.txt` file.
 4. Run the script to generate MP3 files for each chunk of the text:
