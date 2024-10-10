@@ -15,7 +15,7 @@ The default voice model chosen is `fable`, but you can change this to your voice
 
 Before running the scripts, make sure you have the following installed:
 
-- Python 3.x
+- Python 3.x (this program was developed in a 3.12.4 environment)
 - `ffmpeg` (for audio concatenation)
 - OpenAI API key (for text-to-speech conversion)
 
