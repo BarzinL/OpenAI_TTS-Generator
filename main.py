@@ -1,11 +1,14 @@
+import toml
 import os
 import subprocess
 import re
 from pathlib import Path
 import openai
 
-# Replace 'your-api-key' with your actual OpenAI API key
-openai.api_key = "your-api-key"
+# Load settings from the TOML file
+config = toml.load('settings.toml')  # Replace with 'tomllib' for Python 3.11+
+# Set up your OpenAI API key from the TOML config file
+openai.api_key = config['openai']['api_key']
 
 def split_text_into_chunks(text, max_length=4096):
     """
